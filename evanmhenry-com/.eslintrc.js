@@ -4,6 +4,7 @@ module.exports = {
 		'es2021': true
 	},
 	'extends': [
+		"airbnb", "plugin:prettier/recommended",
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended'

@@ -2,11 +2,53 @@
 import { Button } from '@/components/ui/button'
 import Layout from '../layouts/Layout.astro'
 import '../../globals.css'
+import { Badge } from '@/components/ui/badge'
+import { BadgeVariant } from '@/components/ui/badge'
+
+const projects = [
+	{
+		title: 'Spade Software',
+		description: 'Innovative software development studio based out of Columbus, OH',
+		url: 'https://spadehq.com',
+		status: 'Building...',
+		variant: BadgeVariant.Building,
+	},
+	{
+		title: 'BackOps',
+		description: 'Event operations management software',
+		url: 'https://backopslive.com',
+		status: 'Building...',
+		variant: BadgeVariant.Building,
+	},
+	{
+		title: 'Crato Project',
+		description: 'A growing collection of principles and tactics to help simplify your fitness journey',
+		url: 'https://cratoproject.com/',
+		status: 'Coming Soon',
+		variant: BadgeVariant.ComingSoon,
+	},
+]
 ---
 
 <Layout title='Welcome to Astro.'>
-	<main>
-		<h1 class='text-blue-500 bg-red-6'>Evan Henry</h1>
-		<Button> test</Button>
-	</main>
+	<div class='flex min-h-screen flex-col py-8 container max-w-prose'>
+		<header class='text-3xl font-semibold tracking'>Evan Henry</header>
+		<p class='text-muted-foreground'>Software Engineer and Designer</p>
+		<div class='mt-8'>
+			<div class='flex flex-col gap-4 justify-center h-full w-full text-primary'>
+				<h1 class='text-2xl font-semibold'>Projects</h1>
+				{
+					projects.map((project) => (
+						<a href={project.url} class='flex flex-col border border-zinc-800 rounded-lg bg-zinc-900 p-4 gap-2 no-underline hover:bg-zinc-800'>
+							<div class='flex justify-between'>
+								<h3 class='text-xl font-medium'>{project.title}</h3>
+							{project.status && <Badge variant={project.variant}>{project.status}</Badge>}
+							</div>
+							<p class='text-muted-foreground'>{project.description}</p>
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
 </Layout>

@@ -22,7 +22,7 @@ const navOptions = [
 const socials = [
 	{ name: 'Instagram', icon: InstagramDark, link: 'https://www.instagram.com/evanmhenry/' },
 	{ name: 'Twitter', icon: TwitterDark, link: 'https://twitter.com/evanmhenry' },
-	{ name: 'GitHub', icon: GitHubDark, link: '' },
+	{ name: 'GitHub', icon: GitHubDark, link: 'https://github.com/evanmhenry' },
 ]
 
 const Header = ({ isOpen, setIsOpen }: HeaderProps) => {

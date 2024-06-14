@@ -1,7 +1,7 @@
-import { BadgeVariant } from '@/components/ui/Badge'
 import SpadeImage from '@/assets/spadesoftware-application-icon.jpg'
 import BackOpsImage from '@/assets/backops-application-icon.jpg'
 import CratoProjectImage from '@/assets/cratoproject-application-icon.jpg'
+import { BadgeVariant } from '@/components/ui/Enums'
 
 export const works = [
 	{

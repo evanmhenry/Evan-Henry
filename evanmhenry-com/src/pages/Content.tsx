@@ -1,4 +1,4 @@
-import { BadgeVariant } from '@/components/ui/Badge'
+// import { BadgeVariant } from '@/components/ui/Badge'
 import SpadeImage from '@/assets/spadesoftware-application-icon.jpg'
 import BackOpsImage from '@/assets/backops-application-icon.jpg'
 import CratoProjectImage from '@/assets/cratoproject-application-icon.jpg'
@@ -9,7 +9,7 @@ export const works = [
 		description: 'Software studio crafting tailored, high-performance, and intuitive solutions',
 		url: 'https://spadehq.com',
 		status: 'Building...',
-		variant: BadgeVariant.Building,
+		// variant: BadgeVariant.Building,
 		image: SpadeImage,
 	},
 	{
@@ -17,7 +17,7 @@ export const works = [
 		description: 'Event operations management software',
 		url: 'https://backopslive.com',
 		status: 'Building...',
-		variant: BadgeVariant.Building,
+		// variant: BadgeVariant.Building,
 		image: BackOpsImage,
 	},
 	{
@@ -25,7 +25,7 @@ export const works = [
 		description: 'Principles, tactics, and tools to simplify becoming healthy',
 		url: 'https://cratoproject.com/',
 		status: 'Coming Soon',
-		variant: BadgeVariant.ComingSoon,
+		// variant: BadgeVariant.ComingSoon,
 		image: CratoProjectImage,
 	},
 ]

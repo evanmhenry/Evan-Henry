@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { cn } from '@/lib/utils'
 
-export enum BadgeVariant {
+enum BadgeVariant {
 	Building = 'orange',
 	ComingSoon = 'default',
 }
@@ -29,4 +29,4 @@ function Badge({ className, variant, ...props }: BadgeProps) {
 	return <div className={cn(badgeVariants({ variant }), className)} {...props} />
 }
 
-export { Badge, badgeVariants }
+export { Badge, badgeVariants, BadgeVariant }

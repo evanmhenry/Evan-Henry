@@ -2,7 +2,6 @@ import { BadgeVariant } from '@/components/ui/Badge'
 import SpadeImage from '@/assets/spadesoftware-application-icon.jpg'
 import BackOpsImage from '@/assets/backops-application-icon.jpg'
 import CratoProjectImage from '@/assets/cratoproject-application-icon.jpg'
-import ExampleUI from '@/assets/exampleUI.jpg'
 
 export const works = [
 	{
@@ -28,14 +27,6 @@ export const works = [
 		status: 'Coming Soon',
 		variant: BadgeVariant.ComingSoon,
 		image: CratoProjectImage,
-	},
-	{
-		title: 'Spade Software',
-		description: 'Software studio crafting tailored, high-performance, and intuitive solutions',
-		url: 'https://spadehq.com',
-		status: 'Building...',
-		variant: BadgeVariant.Building,
-		image: ExampleUI,
 	},
 ]
 

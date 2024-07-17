@@ -1,32 +1,33 @@
-import SpadeImage from '@/assets/spadesoftware-application-icon.jpg'
-import BackOpsImage from '@/assets/backops-application-icon.jpg'
-import CratoProjectImage from '@/assets/cratoproject-application-icon.jpg'
-import { BadgeVariant } from '@/components/ui/Enums'
+import SpadeImage from '@/assets/spade-software-icon.svg'
+import BackOpsImage from '@/assets/backops-icon.svg'
+import CratoProjectImage from '@/assets/crato-project-icon.svg'
+import PayGridsImage from '@/assets/paygrids-icon.svg'
 
-export const works = [
+
+export const projects = [
 	{
 		title: 'Spade Software',
 		description: 'Software studio crafting tailored, high-performance, and intuitive solutions',
 		url: 'https://spadehq.com',
-		status: 'Building...',
-		variant: BadgeVariant.Building,
 		image: SpadeImage,
 	},
 	{
 		title: 'BackOps',
 		description: 'Event operations management software',
 		url: 'https://backopslive.com',
-		status: 'Building...',
-		variant: BadgeVariant.Building,
 		image: BackOpsImage,
 	},
 	{
 		title: 'Crato Project',
 		description: 'Principles, tactics, and tools to simplify becoming healthy',
 		url: 'https://cratoproject.com/',
-		status: 'Coming Soon',
-		variant: BadgeVariant.ComingSoon,
 		image: CratoProjectImage,
+	},
+	{
+		title: 'PayGrids',
+		description: 'Tip pool management software ',
+		url: 'https://paygrids.com/',
+		image: PayGridsImage,
 	},
 ]
 

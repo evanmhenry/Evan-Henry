@@ -1,22 +1,25 @@
-import { works } from './Content'
+import BookSummaryCard from './BookSummaryCard'
+import { bookSummaries, projects } from './Content'
+import ProjectCard from './ProjectCard'
 
 const LandingPage = () => {
 	return (
 		<div className='flex flex-col container max-w-3xl gap-16 my-8'>
 			<div className='flex flex-col gap-6 justify-center h-full w-full text-primary'>
-				<h1 className='text-3xl font-semibold tracking'>My Work</h1>
+				<div className='flex flex-col gap-1'>
+					<div className='text-sm text-zinc-500'>My Work</div>
+					<h1 className='text-2xl font-semibold'>Projects I'm Building</h1>
+				</div>
+
 				<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6'>
-					{works.map((work) => (
-						<a
-							href={work.url}
-							className='p-6 flex flex-col gap-6 w-full max-w-96 min-w-80 justify-center rounded-2xl border bg-secondary/60 hover:bg-secondary hover:cursor-pointer'
-						>
-							<img src={work.image} alt={work.title} className='rounded-xl aspect-square object-cover' />
-							<div className='flex flex-col gap-1'>
-								<h1 className='text-2xl font-semibold tracking'>{work.title}</h1>
-								<p className='text-muted-foreground'>{work.description}</p>
-							</div>
-						</a>
+					{projects.map((work) => (
+						<ProjectCard title={work.title} description={work.description} url={work.url} status={work.status} image={work.image} />
+					))}
+				</div>
+
+				<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6'>
+					{bookSummaries.map((summary) => (
+						<BookSummaryCard title={summary.title} description={summary.description} path={summary.path} />
 					))}
 				</div>
 			</div>

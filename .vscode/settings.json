@@ -1,0 +1,20 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "prettier.endOfLine": "lf",
+  "prettier.configPath": "BackOps.Platform.Web//.prettierrc",
+  "prettier.ignorePath": "BackOps.Platform.Web//.prettierignore",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#09090b", // orange-800
+    "titleBar.activeBackground": "#18181b", // orange-700
+    "titleBar.activeForeground": "#f4f4f5" // orange-100
+  },
+  "tailwindCSS.experimental.classRegex": ["class:\\s*?[\"'`]([^\"'`]*).*?,"]
+}

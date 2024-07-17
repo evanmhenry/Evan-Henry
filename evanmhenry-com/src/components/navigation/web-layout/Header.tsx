@@ -2,10 +2,8 @@ import { Link } from 'react-router-dom'
 import HamburgerMenu from './HamburgerMenu'
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from '@/components/ui/NavigationMenu'
 import DarkLogo from '@/assets/evanmhenry-logo-dark.svg'
-import InstagramDark from '@/assets/instagram-dark.svg'
-import TwitterDark from '@/assets/twitter-dark.svg'
-import GitHubDark from '@/assets/github-dark.svg'
 import type { Dispatch, SetStateAction } from 'react'
+import { GitHubIcon, InstagramIcon, TwitterIcon } from '@/components/ui/SocialIcon'
 
 type HeaderProps = {
 	isOpen: boolean
@@ -20,9 +18,9 @@ const navOptions = [
 ]
 
 const socials = [
-	{ name: 'Instagram', icon: InstagramDark, link: 'https://www.instagram.com/evanmhenry/' },
-	{ name: 'Twitter', icon: TwitterDark, link: 'https://twitter.com/evanmhenry' },
-	{ name: 'GitHub', icon: GitHubDark, link: 'https://github.com/evanmhenry' },
+	{ name: 'GitHub', icon: <GitHubIcon link='https://www.github.com/evanmhenry' /> },
+	{ name: 'Twitter', icon: <TwitterIcon link='https://www.twitter.com/evanmhenry1' /> },
+	{ name: 'Instagram', icon: <InstagramIcon link='https://www.instagram.com/evanmhenry' /> },
 ]
 
 const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
@@ -52,11 +50,7 @@ const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
 					<div className='flex flex-col gap-10'>
 						{/* <Button size='lg'>Contact</Button> */}
 						<div className='flex gap-6'>
-							{socials.map((social) => (
-								<a href={social.link} target='_blank' rel='noopener noreferrer'>
-									<img src={social.icon} alt={social.name} className='h-8 w-8 scale-90 transition-transform duration-300 ease-in-out hover:opacity-75 hover:scale-100' />
-								</a>
-							))}
+							<div className='flex gap-1 ml-[-10px]'>{socials.map((social) => social.icon)}</div>
 						</div>
 						<div className='flex flex-col gap-6'>
 							{navOptions.map((item) => (

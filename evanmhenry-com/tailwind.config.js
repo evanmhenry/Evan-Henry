@@ -80,6 +80,20 @@ export const theme = {
 			'accordion-down': 'accordion-down 0.2s ease-out',
 			'accordion-up': 'accordion-up 0.2s ease-out',
 		},
+		backgroundImage: {
+			'custom-gradient': 'linear-gradient(180deg, #1e1e1e, #121212)',
+			'book-gradient': 'linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0) 12%,hsla(0,0%,100%,.25) 29.25%,hsla(0,0%,100%,0) 50.5%,hsla(0,0%,100%,0) 75.25%,hsla(0,0%,100%,.25) 91%,hsla(0,0%,100%,0)),linear-gradient(90deg,rgba(0,0,0,.03),rgba(0,0,0,.1) 12%,transparent 30%,rgba(0,0,0,.02) 50%,rgba(0,0,0,.2) 73.5%,rgba(0,0,0,.5) 75.25%,rgba(0,0,0,.15) 85.25%,transparent)',
+
+		},
+		boxShadow: {
+			'custom': '0 1px 0 1px rgba(0, 0, 0, .02), 0 4px 6px rgba(0, 0, 0, .02), inset 0 0 0 6px #121212',
+		},
+		opacity: {
+			'book': '.2',
+		},
 	},
 }
-export const plugins = []
+import typography from '@tailwindcss/typography';
+import filters from 'tailwindcss-filters';
+
+export const plugins = [typography, filters];

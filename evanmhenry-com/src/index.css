@@ -54,6 +54,7 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+		@apply overflow-x-clip;
 	}
 }
 
@@ -61,4 +62,89 @@
 	.container {
 		@apply px-4 sm:px-8;
 	}
+}
+
+a:hover #content {
+	transform: rotateY(-20deg);
+}
+
+.markdown {
+	@apply max-w-none;
+}
+
+blockquote {
+	@apply border-l-4 border-primary-foreground pl-4 italic my-4 text-muted-foreground;
+}
+
+code,
+pre {
+	@apply bg-gray-200 p-2 rounded;
+}
+
+pre {
+	@apply overflow-x-auto;
+}
+
+h1 {
+	@apply text-3xl font-bold mt-12 mb-6; /* Larger and bolder than h2 */
+}
+
+h2 {
+	@apply text-2xl font-bold mt-5 mb-3; /* Slightly smaller than h1 */
+}
+
+h3 {
+	@apply text-xl font-semibold mt-4 mb-2; /* Slightly smaller than h2 */
+}
+
+h4 {
+	@apply text-lg font-semibold mt-3 mb-1.5;
+}
+
+h5 {
+	@apply font-semibold mt-2 mb-1;
+}
+
+h6 {
+	@apply text-base font-semibold mt-1.5 mb-0.5; /* Slightly smaller than h5 */
+}
+
+p {
+	@apply mb-4 leading-relaxed text-lg;
+}
+
+/* MARKDOWN LIST STYLING */
+ul,
+ol {
+	@apply list-inside pl-6;
+	list-style-type: disc;
+}
+
+ul li::marker,
+ol li::marker {
+	@apply text-muted-foreground;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	list-style-type: disc;
+	@apply pl-6;
+}
+
+li {
+	@apply mb-2;
+	text-indent: -16px;
+	padding-left: 4px;
+}
+
+li p {
+	@apply m-0;
+}
+
+.glassmorphism {
+	background: hsla(var(--background), 0.2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }

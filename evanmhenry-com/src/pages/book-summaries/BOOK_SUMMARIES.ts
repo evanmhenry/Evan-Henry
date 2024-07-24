@@ -1,4 +1,5 @@
 import { AtomicHabitsContent } from './books/AtomicHabitsContent'
+import { HowToWinFriendsContent } from './books/HowToWinFriendsContent'
 
 export type Book = {
 	title: string
@@ -13,6 +14,12 @@ export const BOOK_SUMMARIES: { [key: string]: Book } = {
 		author: 'James Clear',
 		category: 'Self-Improvement',
 		content: AtomicHabitsContent,
+	},
+	'2': {
+		title: 'How to Win Friends and Influence People',
+		author: 'Dale Carnegie',
+		category: 'Self-Improvement',
+		content: HowToWinFriendsContent,
 	},
 }
 

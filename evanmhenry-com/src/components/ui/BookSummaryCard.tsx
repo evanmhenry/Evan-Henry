@@ -1,11 +1,10 @@
 type BookSummaryCardProps = {
 	title: string
-	description: string
 	author: string
 	path: string
 }
 
-const BookSummaryCard = ({ title, description, author, path }: BookSummaryCardProps) => {
+const BookSummaryCard = ({ title, author, path }: BookSummaryCardProps) => {
 	return (
 		<a href={path} className='flex bg-zinc-900 w-48 rounded-md border transform transition-transform duration-500' style={{ perspective: '1000px' }}>
 			<div id='binding' className='w-6 h-60 bg-book-gradient opacity-book'></div>
@@ -16,7 +15,6 @@ const BookSummaryCard = ({ title, description, author, path }: BookSummaryCardPr
 			>
 				<div className='flex flex-col gap-1'>
 					<div className='text-xl'>{title}</div>
-					<div className='text-zinc-500 text-sm'>{description}</div>
 				</div>
 				<div className='text-zinc-500'>By {author}</div>
 			</div>

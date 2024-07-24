@@ -59,7 +59,6 @@ export const guides = [
 
 export const bookSummaries = bookSummariesList.slice(0, 5).map((book) => ({
 	title: book.title,
-	description: `A summary of ${book.title} by ${book.author}`,
 	author: book.author,
 	path: `/book-summaries/${book.summaryId}`,
 }))

@@ -20,9 +20,9 @@ const LandingPage = () => {
 					<div className='text-sm text-zinc-500'>Summaries</div>
 					<div className='text-2xl font-semibold'>Book Summaries I've Written</div>
 				</div>
-				<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6'>
+				<div className='flex gap-6'>
 					{bookSummaries.map((summary) => (
-						<BookSummaryCard title={summary.title} description={summary.description} author={summary.author} path={summary.path} />
+						<BookSummaryCard title={summary.title} author={summary.author} path={summary.path} />
 					))}
 				</div>
 			</div>

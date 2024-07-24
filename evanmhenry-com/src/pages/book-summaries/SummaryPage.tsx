@@ -8,10 +8,10 @@ const SummaryPage = () => {
 	const summary = summaryId ? BOOK_SUMMARIES[summaryId] : null
 
 	return (
-		<div className='container max-w-prose'>
+		<div className='container max-w-prose my-16'>
 			{summary ? (
 				<>
-					<div className='flex flex-col gap-1 my-8'>
+					<div className='flex flex-col gap-1'>
 						<div className='text-3xl font-semibold'>{summary.title}</div>
 						<div className='text-lg text-muted-foreground'>By {summary.author}</div>
 					</div>

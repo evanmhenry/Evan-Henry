@@ -11,7 +11,7 @@ const SummaryPage = () => {
 		<div className='container max-w-prose'>
 			{summary ? (
 				<>
-					<div className='flex flex-col gap-1 mt-8'>
+					<div className='flex flex-col gap-1 my-8'>
 						<div className='text-3xl font-semibold'>{summary.title}</div>
 						<div className='text-lg text-muted-foreground'>By {summary.author}</div>
 					</div>

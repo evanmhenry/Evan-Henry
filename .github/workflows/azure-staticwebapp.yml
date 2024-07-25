@@ -2,16 +2,15 @@ name: Deploy web app to Azure Static Web Apps
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches: ["main"]
+    branches: ['main']
 
-# Environment variables available to all jobs and steps in this workflow
 env:
-  APP_LOCATION: "evanmhenry-com"
-  APP_ARTIFACT_LOCATION: "/dist"
-  AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing deployment token for your static web app
+  APP_LOCATION: 'evanmhenry-com'
+  APP_ARTIFACT_LOCATION: '/dist'
+  AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
 
 permissions:
   contents: read
@@ -19,8 +18,8 @@ permissions:
 jobs:
   build_and_deploy_job:
     permissions:
-      contents: read # for actions/checkout to fetch code
-      pull-requests: write # for Azure/static-web-apps-deploy to comment on PRs
+      contents: read
+      pull-requests: write
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
@@ -32,7 +31,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "20.x" # Set Node.js version to 20.x
+          node-version: '20.x'
 
       - name: Clear Yarn cache
         run: yarn cache clean
@@ -45,21 +44,22 @@ jobs:
         run: yarn build
         working-directory: ${{ env.APP_LOCATION }}
 
+      - name: Verify build output
+        run: ls -alh ${{ env.APP_LOCATION }}/dist
+        # Ensure that the staticwebapp.config.json file is in the build output directory
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing api token for app
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: 'upload'
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
           app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
-          ###### End of Repository/Build Configurations ######
         env:
-          NODE_VERSION: "20.x"
+          NODE_VERSION: '20.x'
 
   close_pull_request_job:
     permissions:
@@ -72,5 +72,6 @@ jobs:
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing api token for app
-          action: "close"
+          azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: 'close'
+

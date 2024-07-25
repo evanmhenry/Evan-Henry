@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 type BookSummaryCardProps = {
 	title: string
 	author: string
@@ -5,8 +7,14 @@ type BookSummaryCardProps = {
 }
 
 const BookSummaryCard = ({ title, author, path }: BookSummaryCardProps) => {
+	const navigate = useNavigate()
+
 	return (
-		<a href={path} className='flex bg-zinc-900 w-48 rounded-md border transform transition-transform duration-500' style={{ perspective: '1000px' }}>
+		<a
+			className='flex bg-zinc-900 w-48 rounded-md border transform transition-transform duration-500 hover:cursor-pointer'
+			style={{ perspective: '1000px' }}
+			onClick={() => navigate(path)}
+		>
 			<div id='binding' className='w-6 h-60 bg-book-gradient opacity-book'></div>
 			<div
 				id='content'

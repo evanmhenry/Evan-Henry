@@ -83,7 +83,7 @@ const DataTable = ({ title, data, columns, searchFilter = [], addLabel, onAdd, o
 				{/* TODO: add global search / search multiple columns */}
 				<h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>{title}</h3>
 				<div className='flex items-center space-x-2'>
-					{searchFilter.length > 0 && <Input placeholder='Search...' value={searchValue} onChange={(event) => searchTable(event.target.value)} className='max-w-sm' />}
+					{searchFilter.length > 0 && <Input placeholder='Search books...' value={searchValue} onChange={(event) => searchTable(event.target.value)} className='max-w-sm' />}
 					{columnsEnabled && (
 						<DropdownMenu>
 							<DropdownMenuTrigger asChild>

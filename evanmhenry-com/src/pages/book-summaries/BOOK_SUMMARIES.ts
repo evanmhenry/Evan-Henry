@@ -1,5 +1,7 @@
-import { AtomicHabitsContent } from './books/AtomicHabitsContent'
-import { HowToWinFriendsContent } from './books/HowToWinFriendsContent'
+import { AtomicHabitsContent } from './summaries/AtomicHabitsContent'
+import { EssentialismContent } from './summaries/EssentialismContent'
+import { ExtremeOwnershipContent } from './summaries/ExtremeOwnershipContent'
+import { HowToWinFriendsContent } from './summaries/HowToWinFriendsContent'
 
 export type Book = {
 	title: string
@@ -20,6 +22,18 @@ export const BOOK_SUMMARIES: { [key: string]: Book } = {
 		author: 'Dale Carnegie',
 		category: 'Self-Improvement',
 		content: HowToWinFriendsContent,
+	},
+	'3': {
+		title: 'Extreme Ownership',
+		author: 'Jocko Willink and Leif Babin',
+		category: 'Leadership',
+		content: ExtremeOwnershipContent,
+	},
+	'4': {
+		title: 'Essentialism',
+		author: 'Greg McKeown',
+		category: 'Self-Improvement',
+		content: EssentialismContent,
 	},
 }
 

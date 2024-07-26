@@ -1,5 +1,4 @@
-export const HowToWinFriendsContent = `> Nothing in this book will work in all cases or with all people. If you are not satisfied with your relationships / status in life, why not makes some changes to how you deal with people?
-
+export const HowToWinFriendsContent = `
 # "If you want to gather honey don't kick over the beehive"
 
 - Criticism is futile because it puts a person on defense and makes them want to justify themselves

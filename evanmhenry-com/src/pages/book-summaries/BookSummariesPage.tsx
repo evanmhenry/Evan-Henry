@@ -12,8 +12,8 @@ const BookSummariesPage = () => {
 	}
 
 	return (
-		<div>
-			<DataTable title='Book Summaries' data={bookSummariesList} columns={BookSummaryColumns()} onRowClick={viewSummary} />
+		<div className='container max-w-screen-lg mt-8'>
+			<DataTable title='Book Summaries' data={bookSummariesList} columns={BookSummaryColumns()} onRowClick={viewSummary} searchFilter={['title']} />
 		</div>
 	)
 }

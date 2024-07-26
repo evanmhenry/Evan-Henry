@@ -1,4 +1,5 @@
 import { AtomicHabitsContent } from './summaries/AtomicHabitsContent'
+import { EssentialismContent } from './summaries/EssentialismContent'
 import { ExtremeOwnershipContent } from './summaries/ExtremeOwnershipContent'
 import { HowToWinFriendsContent } from './summaries/HowToWinFriendsContent'
 
@@ -27,6 +28,12 @@ export const BOOK_SUMMARIES: { [key: string]: Book } = {
 		author: 'Jocko Willink and Leif Babin',
 		category: 'Leadership',
 		content: ExtremeOwnershipContent,
+	},
+	'4': {
+		title: 'Essentialism',
+		author: 'Greg McKeown',
+		category: 'Self-Improvement',
+		content: EssentialismContent,
 	},
 }
 
